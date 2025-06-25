@@ -27,9 +27,9 @@
 Cypress.Commands.add('apiRequest', (method, endpoint, options = {}) => {
     cy.request({
         method,
-        url: `${Cypress.env('baseUrl') || 'https://reqres.in/api'}${endpoint}`,
+        url: `${Cypress.env('baseUrl') || 'https://gorest.co.in/'}${endpoint}`, failOnStatusCode: false,
         headers: {
-            'x-api-key': 'reqres-free-v1',
+            'Authorization': `Bearer bae9e92f71f75be72a70a13b43f8644f6fe686363f49c9df874e118fd1371831`,
             ...options.headers,
         },
         body: options.body,
